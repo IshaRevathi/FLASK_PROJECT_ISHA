@@ -1,0 +1,13 @@
+
+.imgs{
+    
+    height: 1000 px;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),url(static/images.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+nav{
+    height :80px;
+    width: 100%;
+    background-color: grey;
+}
