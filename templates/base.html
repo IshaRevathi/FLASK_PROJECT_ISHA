@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %} Inventory Management</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        
+
+        .content {
+            margin: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            text-align: center;
+            font-size : 30px;
+        }
+
+        .product {
+            flex: 20%;
+            padding: 10px;
+            margin: 10px;
+            background-color: #FFE5B4;
+            inline-size: 100%;
+
+        }
+
+
+        .name a {
+            color: #00a36f;
+            text-decoration: none;
+        }
+
+        nav a {
+            color: black;
+            font-size: 2em;
+            margin-right: 50px;
+            text-decoration: none;
+            text-shadow: #FC0 1px 0 10px;
+            font-family: system-ui;
+            border: 1px solid transparent;
+            padding: 7px 10px;
+            border-radius: 3px;
+        }
+;
+        .imgs{
+            
+            height: 100px;
+            background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),url(static/images.jpeg);
+            background-size: cover;
+            background-position: center;
+        }
+
+
+        form{
+            align: center;
+            font-size: 1.24em;
+
+        }
+        div.label{
+            display: inline-block;
+        }
+        
+
+    </style>
+
+</head>
+<body>
+    <nav>
+        
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('index') }}">Inventory</a>      
+        <a href="{{ url_for('create') }}">Add product</a>
+    </nav>
+    <hr>
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
+    
+</body>
+</html>

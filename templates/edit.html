@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 style="width: 100%">
+        {% block title %} &emsp;&emsp;&emsp;&emsp;Edit {{ product.product_name}} 's Details
+        {% endblock %}
+    </h1>
+    <style>
+        body{
+            background-color: #C19A6B;
+        }
+        .label{
+           
+            display: inline-block;
+        }
+        #form{
+            border-radius: 20px;
+            background:black;
+            color:white;
+            width : 1000px;
+            padding: 20px;
+            float: center;
+        }
+        h1{
+            text-align: left;
+        }
+
+    </style>
+    
+    <div id="form">
+        <form method="post">
+
+            <p>
+                <label for="product_name">Product Name :</label>
+                <input type="text" name="product_name"
+                       value={{ product.product_name }}
+                       placeholder="Product name">
+                </input>
+            </p>
+
+            <p>
+                <label for="company">Company :</label>
+                <input type="text" name="company"
+                       value={{ product.company }}
+                       placeholder="Company">
+                </input>
+            </p>
+
+            <p>
+                <label for="quantity ">Quantity :</label>
+                <input type="number" name="quantity"
+                       value={{ product.quantity }}
+                       placeholder="Quantity">
+                </input>
+            </p>
+
+            <p>
+                <label for="movement_id">Movement_id :</label>
+                <input type="text" name="movement_id"
+                       value={{ product.movement_id }}
+                       placeholder="movement_id">
+                </input>
+            </p>
+
+            <p>
+                <label for="from_location">From_location :</label>
+                <input type="text" name="from_location"
+                       value={{ product.from_location }}
+                       placeholder="from_location">
+                </input>
+            </p>
+
+            <p>
+                <label for="to_location">To_location :</label>
+                <input type="text" name="to_location"
+                       value={{ product.to_location }}
+                       placeholder="to_location">
+                </input>
+            </p>
+
+            <p>
+                <center>
+                    <button type="submit" class="btn btn-secondary">Submit</button>
+                </center>
+            </p>
+        </form>
+    </div>
+
+{% endblock %}

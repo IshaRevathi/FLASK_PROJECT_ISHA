@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 style="width: 100%; font-size:300">{% block title %} &emsp;&emsp;&emsp;&emsp;Add a New Product {% endblock %}</h1>
+
+    <style>
+        body{
+        background: #FBCEB1; 
+        }
+        .button{
+            class:btn btn-outline-secondary;
+        }
+        h1{
+            text-align: center;
+        }
+        .label{
+           
+            display: inline-block;
+        }
+        #form{
+            border-radius: 20px;
+            background:black;
+            color:white;
+            width : 1000px;
+            padding: 20px;
+            float: center;
+        }
+        h1{
+            text-align: left;
+        }
+        
+    </style>
+    <body background="./static/aa.webp"></body>
+
+    <div class="shadow p-3 mb-5 bg-body-tertiary rounded">   
+      <div id="form">
+        <form method="post">
+        
+
+            <p>
+                <label for="product_name">Product Name :</label>
+                <input type="text" name="product_name"
+                       placeholder="Product name" required size="30">
+                </input>
+            </p>
+
+            <p>
+                <label for="company">Company :</label>
+                <input type="text" name="company"
+                       placeholder="Company" required size="30">
+                </input>
+            </p>
+
+            <p>
+                <label for="quantity">Quantity :</label>
+                <input type="number" name="quantity"
+                       placeholder="Quantity" required size="30">
+                </input>
+            </p>
+
+            <p>
+                <label for="movement_id">Movement_id :</label>
+                <input type="text" name="movement_id"
+                       placeholder="movement_id" required size="30">
+                </input>
+            </p>
+
+            <p>
+                <label for="from_location">From_location :</label>
+                <input type="text" name="from_location"
+                       placeholder="From_location" required size="30">
+                </input>
+            </p>
+
+            <p>
+                <label for="to_location">To_location :</label>
+                <input type="text" name="to_location"
+                       placeholder="to_location" required size="30">
+                </input>
+            </p>
+
+            <p>
+                <button style="height:20px;width:100px" class="btn btn-outline-secondary" type="submit">Submit</button>
+            </p>
+       
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <span class="title">
+        <h1>{% block title %} {{ product.product_name }} {% endblock %}</h1>
+    </span>
+    <div class="content">
+            <div class="product">
+                <p><b>#{{ product.id }}</b></p>
+                <b>
+                    <p class="name">{{ product.product_name }} </p>
+                </b>
+                <p>Company Name: {{ product.company }}</p>
+                <p>Quantity: {{ product.quantity }}</p>
+                <p>Stored At: {{ product.stored_at }}<</p>
+                <p>Movement_id: {{ product.movement_id }}</p>
+                <p>From_location: {{ product.from_location }}</p>
+                <p>To_location: {{ product.to_location }}</p>
+            </div>
+    </div>
+{% endblock %}
